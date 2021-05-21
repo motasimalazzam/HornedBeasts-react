@@ -20,11 +20,15 @@ class HornedBeast extends React.Component {
         })
     }
 
+    popUpTheCard=()=>{
+        this.props.popUpTheCard(this.props.title)
+    }
+
     render() {
 
         return (
 
-            <div>
+            <div style={{display:'inline-block'}}>
 
                 {/* <h2>{this.props.title}</h2>
                 <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title} onClick={this.increaseNumberOfVotes} />
@@ -33,14 +37,15 @@ class HornedBeast extends React.Component {
 
                 
 
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={this.props.imgUrl} alt={this.props.title} title={this.props.title}  />
+                <Card onClick={this.popUpTheCard} style={{ width: '18rem'}}>
+                    <Card.Img variant="top" src={this.props.image_url} alt={this.props.title} title={this.props.title}  />
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>
                         {this.props.description}
                         </Card.Text>
-                         <Button variant="primary" onClick={this.increaseNumberOfVotes}>Do you love me? 😻{this.state.numberOfVotes}</Button> 
+                        <Card.Text></Card.Text>
+                         <Button variant="primary" onClick={this.increaseNumberOfVotes} >Do you love me? 😻{this.state.numberOfVotes}</Button> 
                     </Card.Body>
                 </Card>
 

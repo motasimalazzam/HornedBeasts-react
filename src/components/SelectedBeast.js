@@ -5,10 +5,6 @@ import Card from 'react-bootstrap/Card'
 
 class SelectedBeast extends React.Component {
 
-    // handleClose = () =>{
-    //     this.props.handleClose();
-    // }
-
     render() {
         return (
             <div>
@@ -22,9 +18,6 @@ class SelectedBeast extends React.Component {
                     <Modal.Footer>
                         <Button variant="secondary" onClick={this.props.closePic}>
                             Close
-                        </Button>
-                        <Button variant="primary" onClick={this.props.closePic}>
-                            Save Changes
                         </Button>
                     </Modal.Footer>
                 </Modal>

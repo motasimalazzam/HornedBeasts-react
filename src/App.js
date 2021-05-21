@@ -14,14 +14,14 @@ class App extends React.Component{
       showCard : false,
       selectedCard : {},
     }
-  }
+  };
 
 
   handleClose = () => {
     this.setState({
       showCard: false
     });
-  }
+  };
 
   popUpTheCard = (title) => {
     let selectedCard = HornedData.find(card => {
@@ -34,7 +34,13 @@ class App extends React.Component{
       showCard:true,
       selectedCard: selectedCard
     })
-  }
+  };
+
+  gitFilterdBeast=(filterdBeast)=>{
+    this.setState({
+      HornedData: filterdBeast
+    })
+  };
 
 
   render(){
@@ -48,6 +54,7 @@ class App extends React.Component{
         <Main 
         hornedDataToMain={this.state.HornedData}
         popUpTheCard={this.popUpTheCard}
+        gitFilterdBeast={this.gitFilterdBeast}
         />
 
         <SelectedBeast 
@@ -62,6 +69,6 @@ class App extends React.Component{
 
     )
   }
-}
+};
 
 export default App;
